@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十九的个人世界</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'txt-p': '#1e293b',
+            'txt-light': '#64748b',
+            'darkmode-txt-p': '#e2e8f0',
+            'darkmode-txt-light': '#94a3b8',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen">
+  <div class="gradient-background">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+  <header class="container mx-auto px-4 lg:px-8 pb-6 z-50 lg:mt-4 sticky top-0 relative">
+    <nav class="liquid-glass-container z-50 relative">
+      <div class="liquidGlass-wrapper p-2.5 rounded-[35px]">
+        <div class="liquidGlass-text min-h-12 md:min-h-14 flex flex-wrap items-center">
+          <div class="order-0 flex ml-4 items-center">
+            <a href="/" class="flex items-center"><img src="avatar.jpg" alt="十九" class="w-8 h-8 mx-1 rounded-full"><span class="text-xl font-bold text-txt-p dark:text-darkmode-txt-p">十九的个人世界</span></a>
+          </div>
+          <input id="nav-toggle" type="checkbox" class="hidden">
+          <label for="nav-toggle" class="order-2 cursor-pointer flex items-center md:hidden text-txt-p dark:text-darkmode-txt-p lg:order-1">
+            <svg class="h-5 mx-2 fill-current" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path></svg>
+          </label>
+          <ul id="nav-menu" class="bg-slate-100/90 md:bg-inherit rounded-lg text-center relative ml-8 order-3 hidden w-full p-4 md:order-1 md:flex md:w-auto md:space-x-1 md:p-0 lg:space-x-2">
+            <li><a href="/" class="glass-button glass-button--menu !text-orange-500">首页</a></li>
+            <li><a href="/blog.html" class="glass-button glass-button--menu !text-orange-300">分享</a></li>
+            <li><a href="/links.html" class="glass-button glass-button--menu !text-orange-300">交友</a></li>
+            <li><a href="/about.html" class="glass-button glass-button--menu !text-orange-300">关于</a></li>
+          </ul>
+          <div class="order-1 ml-auto flex items-center space-x-2 mr-4">
+            <button id="theme-toggle" class="glass-button glass-button--icon p-2 rounded-full">
+              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+              <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-1 pb-32 md:pb-36 relative z-10">
+    <div class="container mx-auto px-4 lg:px-8">
+      <section class="rounded-[35px] mb-4">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 items-stretch items-stretch">
+          <div class="xl:col-span-1">
+            <div class="liquid-glass-container h-full">
+              <div class="liquidGlass-wrapper dock no-glass-default h-full">
+                <div class="liquidGlass-text h-full">
+                  <div class="rounded-[35px] h-full">
+                    <div class="author-profile h-full">
+                      <div class="relative h-full">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-2xl blur-xl"></div>
+                        <div class="relative h-full flex flex-col justify-center">
+                          <div class="flex flex-col items-center space-y-5 p-8">
+                            <div class="relative group">
+                              <div class="absolute -inset-2 bg-gradient-to-r from-orange-400 via-purple-500 to-blue-500 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-all duration-500 animate-pulse"></div>
+                              <div class="absolute -inset-1 bg-gradient-to-r from-orange-400 via-purple-500 to-blue-500 rounded-full opacity-60"></div>
+                              <img src="avatar.jpg" alt="十九" class="relative w-28 h-28 lg:w-32 lg:h-32 rounded-full border-2 border-white/50 shadow-2xl">
+                            </div>
+                            <div class="text-center space-y-3">
+                              <h1 class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">十九</h1>
+                              <div class="flex flex-wrap justify-center gap-2">
+                                <span class="px-2 py-1 text-xs bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-full">学生</span>
+                                <span class="px-2 py-1 text-xs bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-full">数码爱好者</span>
+                                <span class="px-2 py-1 text-xs bg-green-500/20 text-green-600 dark:text-green-400 rounded-full">AI发烧友</span>
+                              </div>
+                              <p class="text-sm text-txt-light dark:text-darkmode-txt-light px-2 leading-relaxed">我是一名大二在校生，对数码与AI充满浓厚兴趣的发烧友，渴望学习更多知识，变得更加强大</p>
+                              <div class="flex justify-center gap-3">
+                                <a href="https://qm.qq.com/q/rn8I26bl8O" target="_blank" class="glass-button glass-button--icon p-2 rounded-full"><img src="icon1-transparent.png" alt="QQ" class="w-5 h-5 object-contain"></a>
+                                <a href="mailto:3518988571@qq.com" class="glass-button glass-button--icon p-2 rounded-full"><img src="icon2-transparent.png" alt="邮箱" class="w-5 h-5 object-contain"></a>
+                                <a href="https://space.bilibili.com/646698087" target="_blank" class="glass-button glass-button--icon p-2 rounded-full"><img src="icon3-transparent.png" alt="B站" class="w-5 h-5 object-contain"></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="xl:col-span-2">
+            <div class="liquid-glass-container h-full">
+              <div class="liquidGlass-wrapper dock no-glass-default h-full">
+                <div class="liquidGlass-text h-full">
+                  <div class="rounded-[35px] p-6">
+                    <h2 class="text-2xl font-bold mb-4 text-txt-p dark:text-darkmode-txt-p">欢迎来到我的世界 👋</h2>
+                    <p class="text-txt-light dark:text-darkmode-txt-light mb-4">一个独立开发者的精神自留地，喜欢数码和研究乱七八糟的东西，平时可能会一些游戏和技术资源、产品展示，也会写写感悟随笔或者其他乱七八糟的东西。</p>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="glass-card p-4 rounded-2xl text-center"><div class="text-3xl mb-2">📦</div><h3 class="font-bold text-txt-p dark:text-darkmode-txt-p text-sm">资源分享</h3></div>
+                      <div class="glass-card p-4 rounded-2xl text-center"><div class="text-3xl mb-2">🤖</div><h3 class="font-bold text-txt-p dark:text-darkmode-txt-p text-sm">AI探索</h3></div>
+                      <div class="glass-card p-4 rounded-2xl text-center"><div class="text-3xl mb-2">🎁</div><h3 class="font-bold text-txt-p dark:text-darkmode-txt-p text-sm">神秘惊喜</h3></div>
+                      <div class="glass-card p-4 rounded-2xl text-center"><div class="text-3xl mb-2">✨</div><h3 class="font-bold text-txt-p dark:text-darkmode-txt-p text-sm">更多</h3></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-4 grid grid-cols-1 lg:grid-cols-4 gap-6 my-4">
+        <div class="liquid-glass-container lg:col-span-3">
+          <div class="liquidGlass-wrapper dock no-glass-default">
+            <div class="liquidGlass-text">
+              <div class="rounded-lg p-4">
+                <h2 class="text-2xl font-bold mb-4 text-txt-p dark:text-darkmode-txt-p">最新分享</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 min-h-[300px]">
+                  <div class="col-span-full flex items-center justify-center">
+                    <div class="text-center py-8">
+                      <div class="text-4xl mb-3">📝</div>
+                      <p class="text-txt-light dark:text-darkmode-txt-light text-sm">暂无分享内容</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:col-span-1 space-y-6">
+          <div class="liquid-glass-container">
+            <div class="liquidGlass-wrapper dock no-glass-default">
+              <div class="liquidGlass-text">
+                <div class="rounded-lg pt-3">
+                  <div class="flex items-center justify-between mb-4 px-3"><h3 class="text-xl font-bold text-txt-p dark:text-darkmode-txt-p">推荐阅读</h3></div>
+                  <div class="space-y-2 px-2 min-h-[200px] flex items-center justify-center">
+                    <div class="text-center py-4">
+                      <div class="text-3xl mb-2">📖</div>
+                      <p class="text-txt-light dark:text-darkmode-txt-light text-sm">暂无推荐阅读</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="container mx-auto px-4 lg:px-8 fixed bottom-0 left-0 right-0 z-40 pointer-events-none">
+    <div class="mx-auto py-2 md:py-4">
+      <div class="rounded-full pointer-events-auto">
+        <nav class="liquid-glass-container">
+          <div class="liquidGlass-wrapper px-6 py-2 rounded-full">
+            <div class="liquidGlass-text drop-shadow-md-white rounded-full">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-txt-light dark:text-darkmode-txt-light">© 2026 十九的个人世界</span>
+                <div class="flex items-center gap-3">
+                  <a href="https://qm.qq.com/q/rn8I26bl8O" target="_blank" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon1-transparent.png" alt="QQ" class="w-4 h-4 object-contain"></a>
+                  <a href="mailto:3518988571@qq.com" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon2-transparent.png" alt="邮箱" class="w-4 h-4 object-contain"></a>
+                  <a href="https://space.bilibili.com/646698087" target="_blank" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon3-transparent.png" alt="B站" class="w-4 h-4 object-contain"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

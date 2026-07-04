@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分享 | 十九的个人世界</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'txt-p': '#1e293b',
+            'txt-light': '#64748b',
+            'darkmode-txt-p': '#e2e8f0',
+            'darkmode-txt-light': '#94a3b8',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen">
+  <div class="gradient-background">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+  <header class="container mx-auto px-4 lg:px-8 pb-6 z-50 lg:mt-4 sticky top-0 relative">
+    <nav class="liquid-glass-container z-50 relative">
+      <div class="liquidGlass-wrapper p-2.5 rounded-[35px]">
+        <div class="liquidGlass-text min-h-12 md:min-h-14 flex flex-wrap items-center">
+          <div class="order-0 flex ml-4 items-center">
+            <a href="/" class="flex items-center"><img src="avatar.jpg" alt="十九" class="w-8 h-8 mx-1 rounded-full"><span class="text-xl font-bold text-txt-p dark:text-darkmode-txt-p">十九的个人世界</span></a>
+          </div>
+          <input id="nav-toggle" type="checkbox" class="hidden">
+          <label for="nav-toggle" class="order-2 cursor-pointer flex items-center md:hidden text-txt-p dark:text-darkmode-txt-p lg:order-1">
+            <svg class="h-5 mx-2 fill-current" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path></svg>
+          </label>
+          <ul id="nav-menu" class="bg-slate-100/90 md:bg-inherit rounded-lg text-center relative ml-8 order-3 hidden w-full p-4 md:order-1 md:flex md:w-auto md:space-x-1 md:p-0 lg:space-x-2">
+            <li><a href="/" class="glass-button glass-button--menu !text-orange-300">首页</a></li>
+            <li><a href="/blog.html" class="glass-button glass-button--menu !text-orange-500">分享</a></li>
+            <li><a href="/links.html" class="glass-button glass-button--menu !text-orange-300">交友</a></li>
+            <li><a href="/about.html" class="glass-button glass-button--menu !text-orange-300">关于</a></li>
+          </ul>
+          <div class="order-1 ml-auto flex items-center space-x-2 mr-4">
+            <button id="theme-toggle" class="glass-button glass-button--icon p-2 rounded-full">
+              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+              <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-1 pb-32 md:pb-36 relative z-10">
+    <div class="container mx-auto px-4 lg:px-8">
+      <section class="mb-8">
+        <div class="liquid-glass-container">
+          <div class="liquidGlass-wrapper dock no-glass-default">
+            <div class="liquidGlass-text">
+              <div class="rounded-[35px] p-6">
+                <h1 class="text-3xl font-bold text-txt-p dark:text-darkmode-txt-p mb-2">分享列表</h1>
+                <p class="text-txt-light dark:text-darkmode-txt-light">分享技术、工具和生活的点点滴滴</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mb-6">
+        <div class="flex flex-wrap gap-2">
+          <button class="px-4 py-2 bg-orange-500/80 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-orange-400/30 transition-all duration-300 hover:bg-orange-500 hover:shadow-lg active:scale-[0.98] active:bg-orange-600">全部</button>
+          <button class="px-4 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm font-medium backdrop-blur-sm border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/20 hover:shadow-md active:scale-[0.98] active:bg-orange-200/50">技术分享</button>
+          <button class="px-4 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm font-medium backdrop-blur-sm border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/20 hover:shadow-md active:scale-[0.98] active:bg-orange-200/50">工具推荐</button>
+          <button class="px-4 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm font-medium backdrop-blur-sm border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/20 hover:shadow-md active:scale-[0.98] active:bg-orange-200/50">游戏分享</button>
+          <button class="px-4 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm font-medium backdrop-blur-sm border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/20 hover:shadow-md active:scale-[0.98] active:bg-orange-200/50">发发牢骚</button>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="col-span-full text-center py-12">
+          <div class="liquid-glass-container">
+            <div class="liquidGlass-wrapper dock no-glass-default">
+              <div class="liquidGlass-text">
+                <div class="rounded-[25px] p-8">
+                  <div class="text-6xl mb-4">📝</div>
+                  <h3 class="text-xl font-bold text-txt-p dark:text-darkmode-txt-p mb-2">暂无分享内容</h3>
+                  <p class="text-txt-light dark:text-darkmode-txt-light">这里将显示我的分享内容</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-8 flex justify-center">
+        <div class="flex items-center gap-2">
+          <button class="px-4 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm backdrop-blur-sm border border-white/20 dark:border-white/10 disabled:opacity-50 transition-all duration-300" disabled>上一页</button>
+          <button class="px-4 py-2 bg-orange-500/80 text-white rounded-full text-sm backdrop-blur-sm border border-orange-400/30 transition-all duration-300 hover:bg-orange-500 hover:shadow-lg active:scale-[0.98] active:bg-orange-600">1</button>
+          
+          <button class="px-4 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm backdrop-blur-sm border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/20 hover:shadow-md active:scale-[0.98] active:bg-orange-200/50">下一页</button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="container mx-auto px-4 lg:px-8 fixed bottom-0 left-0 right-0 z-40 pointer-events-none">
+    <div class="mx-auto py-2 md:py-4">
+      <div class="rounded-full pointer-events-auto">
+        <nav class="liquid-glass-container">
+          <div class="liquidGlass-wrapper px-6 py-2 rounded-full">
+            <div class="liquidGlass-text drop-shadow-md-white rounded-full">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-txt-light dark:text-darkmode-txt-light">© 2026 十九的个人世界</span>
+                <div class="flex items-center gap-3">
+                  <a href="https://qm.qq.com/q/rn8I26bl8O" target="_blank" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon1-transparent.png" alt="QQ" class="w-4 h-4 object-contain"></a>
+                  <a href="mailto:3518988571@qq.com" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon2-transparent.png" alt="邮箱" class="w-4 h-4 object-contain"></a>
+                  <a href="https://space.bilibili.com/646698087" target="_blank" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon3-transparent.png" alt="B站" class="w-4 h-4 object-contain"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  <script>
+    // 分类标签点击交互
+    document.querySelectorAll('.flex.flex-wrap.gap-2 button').forEach(button => {
+      button.addEventListener('click', function() {
+        // 移除所有按钮的选中状态
+        document.querySelectorAll('.flex.flex-wrap.gap-2 button').forEach(btn => {
+          btn.classList.remove('bg-orange-500', 'text-white');
+          btn.classList.add('bg-white/50', 'dark:bg-gray-800/50', 'text-txt-p', 'dark:text-darkmode-txt-p');
+        });
+        // 添加当前按钮的选中状态
+        this.classList.remove('bg-white/50', 'dark:bg-gray-800/50', 'text-txt-p', 'dark:text-darkmode-txt-p');
+        this.classList.add('bg-orange-500', 'text-white');
+      });
+    });
+
+    // 分页器点击交互
+    document.querySelectorAll('.flex.items-center.gap-2 button').forEach(button => {
+      button.addEventListener('click', function() {
+        if (this.disabled) return;
+        
+        // 移除所有页码的选中状态
+        document.querySelectorAll('.flex.items-center.gap-2 button').forEach(btn => {
+          if (!btn.disabled && btn.textContent !== '上一页' && btn.textContent !== '下一页') {
+            btn.classList.remove('bg-orange-500', 'text-white');
+            btn.classList.add('bg-white/50', 'dark:bg-gray-800/50');
+          }
+        });
+        
+        // 添加当前页码的选中状态
+        if (this.textContent !== '上一页' && this.textContent !== '下一页') {
+          this.classList.remove('bg-white/50', 'dark:bg-gray-800/50');
+          this.classList.add('bg-orange-500', 'text-white');
+        }
+        
+        // 添加点击动画
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          this.style.transform = 'scale(1)';
+        }, 150);
+      });
+    });
+
+    // 按钮悬停效果增强
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        if (!this.disabled) {
+          this.style.transition = 'all 0.2s ease';
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+    // 分类标签点击后保持选中状态
+    document.addEventListener('DOMContentLoaded', function() {
+      const categoryButtons = document.querySelectorAll('.flex.flex-wrap.gap-2 button');
+      
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // 移除所有按钮的选中状态
+          categoryButtons.forEach(btn => {
+            btn.classList.remove('bg-orange-500/80', 'text-white', 'border-orange-400/30');
+            btn.classList.add('bg-white/40', 'dark:bg-white/10', 'text-txt-p', 'dark:text-darkmode-txt-p', 'border-white/20', 'dark:border-white/10');
+          });
+          
+          // 添加当前按钮的选中状态
+          this.classList.remove('bg-white/40', 'dark:bg-white/10', 'text-txt-p', 'dark:text-darkmode-txt-p', 'border-white/20', 'dark:border-white/10');
+          this.classList.add('bg-orange-500/80', 'text-white', 'border-orange-400/30');
+          
+          // 添加点击动画
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = 'scale(1)';
+          }, 150);
+        });
+      });
+      
+      // 分页器点击后保持选中状态
+      const pageButtons = document.querySelectorAll('.flex.items-center.gap-2 button');
+      
+      pageButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          if (this.disabled) return;
+          
+          // 移除所有页码的选中状态
+          pageButtons.forEach(btn => {
+            if (!btn.disabled && btn.textContent !== '上一页' && btn.textContent !== '下一页') {
+              btn.classList.remove('bg-orange-500/80', 'text-white', 'border-orange-400/30');
+              btn.classList.add('bg-white/40', 'dark:bg-white/10', 'text-txt-p', 'dark:text-darkmode-txt-p', 'border-white/20', 'dark:border-white/10');
+            }
+          });
+          
+          // 添加当前页码的选中状态
+          if (this.textContent !== '上一页' && this.textContent !== '下一页') {
+            this.classList.remove('bg-white/40', 'dark:bg-white/10', 'text-txt-p', 'dark:text-darkmode-txt-p', 'border-white/20', 'dark:border-white/10');
+            this.classList.add('bg-orange-500/80', 'text-white', 'border-orange-400/30');
+          }
+          
+          // 添加点击动画
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = 'scale(1)';
+          }, 150);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>交友 | 十九的个人世界</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'txt-p': '#1e293b',
+            'txt-light': '#64748b',
+            'darkmode-txt-p': '#e2e8f0',
+            'darkmode-txt-light': '#94a3b8',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen">
+  <!-- 高级流体渐变背景 -->
+  <div class="gradient-background">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute top-20 left-10 w-96 h-96 bg-orange-200/20 dark:bg-orange-900/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-80 h-80 bg-purple-200/20 dark:bg-purple-900/10 rounded-full blur-3xl"></div>
+  </div>
+  <svg style="position:absolute;width:0;height:0;pointer-events:none"><defs><filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox"><feTurbulence type="fractalNoise" baseFrequency="0.001 0.004" numOctaves="1" seed="17" result="turbulence"></feTurbulence><feComponentTransfer in="turbulence" result="mapped"><feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5"></feFuncR><feFuncG type="gamma" amplitude="0" exponent="1" offset="0"></feFuncG><feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5"></feFuncB></feComponentTransfer><feGaussianBlur in="turbulence" stdDeviation="3" result="softMap"></feGaussianBlur><feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lighting-color="white" result="specLight"><fePointLight x="-200" y="-200" z="300"></fePointLight></feSpecularLighting><feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage"></feComposite><feDisplacementMap in="SourceGraphic" in2="softMap" scale="100" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs></svg>
+  <header class="container mx-auto px-4 lg:px-8 pb-6 z-50 lg:mt-4 sticky top-0 relative">
+    <nav class="liquid-glass-container z-50 relative">
+      <div class="liquidGlass-wrapper p-2.5 rounded-[35px]">
+        <div class="liquidGlass-effect rounded-[35px]"></div><div class="liquidGlass-tint rounded-[35px]"></div><div class="liquidGlass-shine rounded-[35px]"></div>
+        <div class="liquidGlass-text min-h-12 md:min-h-14 flex flex-wrap items-center">
+          <div class="order-0 flex ml-4 items-center">
+            <a href="/" class="flex items-center"><img src="avatar.jpg" alt="十九的个人世界" class="w-8 h-8 mx-1 rounded-full"><span class="text-xl font-bold text-txt-p dark:text-darkmode-txt-p">十九的个人世界</span></a>
+          </div>
+          <input id="nav-toggle" type="checkbox" class="hidden">
+          <label for="nav-toggle" class="order-2 cursor-pointer flex items-center md:hidden text-txt-p dark:text-darkmode-txt-p lg:order-1">
+            <svg class="h-5 mx-2 fill-current" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path></svg>
+          </label>
+          <ul id="nav-menu" class="bg-slate-100/90 md:bg-inherit rounded-lg text-center relative ml-8 order-3 hidden w-full p-4 md:order-1 md:flex md:w-auto md:space-x-1 md:p-0 lg:space-x-2">
+            <li><a href="/" class="glass-button glass-button--menu !text-orange-300">首页</a></li>
+            <li><a href="/blog.html" class="glass-button glass-button--menu !text-orange-300">分享</a></li>
+            <li><a href="/links.html" class="glass-button glass-button--menu !text-orange-500">交友</a></li>
+            <li><a href="/about.html" class="glass-button glass-button--menu !text-orange-300">关于</a></li>
+          </ul>
+          <div class="order-1 ml-auto flex items-center space-x-2 mr-4">
+            <button id="theme-toggle" class="glass-button glass-button--icon p-2 rounded-full" title="切换主题">
+              <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+              <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-1 pb-32 md:pb-36 relative z-10">
+    <div class="container mx-auto px-4 lg:px-8">
+      <section class="mb-8">
+        <div class="liquid-glass-container">
+          <div class="liquidGlass-wrapper dock no-glass-default">
+            <div class="liquidGlass-effect-h"></div><div class="liquidGlass-tint-h"></div><div class="liquidGlass-shine"></div>
+            <div class="liquidGlass-text"><div class="rounded-[35px] p-6">
+              <h1 class="text-3xl font-bold text-txt-p dark:text-darkmode-txt-p mb-2">讨论墙</h1>
+              <p class="text-txt-light dark:text-darkmode-txt-light mb-6">分享想法和讨论话题</p>
+              
+              <!-- 评论输入区 -->
+              <div class="mb-8">
+                <div class="flex gap-4 mb-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold">匿</div>
+                  </div>
+                  <div class="flex-1">
+                    <textarea class="w-full px-4 py-3 rounded-2xl bg-white/50 dark:bg-white/10 border border-white/30 dark:border-white/10 backdrop-blur-sm resize-none focus:outline-none focus:ring-2 focus:ring-orange-400/50 text-txt-p dark:text-darkmode-txt-p placeholder:text-gray-400" rows="3" placeholder="说点什么吧..."></textarea>
+                    <div class="flex justify-end mt-2">
+                      <button class="px-6 py-2 bg-orange-500/80 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-orange-400/30 transition-all duration-300 hover:bg-orange-500 hover:shadow-lg active:scale-[0.98]">发表评论</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 评论列表 -->
+              <div class="space-y-6">
+                <!-- 评论1 -->
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center text-white font-bold">A</div>
+                  </div>
+                  <div class="flex-1">
+                    <div class="bg-white/40 dark:bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/20 dark:border-white/10">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="font-bold text-sm text-txt-p dark:text-darkmode-txt-p">匿名用户</span>
+                        <span class="text-xs text-gray-400">2026-07-04 20:30</span>
+                      </div>
+                      <p class="text-txt-light dark:text-darkmode-txt-light text-sm">网站做得很漂亮！毛玻璃效果很赞！</p>
+                      <div class="flex items-center gap-4 mt-3">
+                        <button class="text-xs text-gray-400 hover:text-orange-500 transition-colors">👍 12</button>
+                        <button class="text-xs text-gray-400 hover:text-orange-500 transition-colors">💬 回复</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- 评论2 -->
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-center text-white font-bold">B</div>
+                  </div>
+                  <div class="flex-1">
+                    <div class="bg-white/40 dark:bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/20 dark:border-white/10">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="font-bold text-sm text-txt-p dark:text-darkmode-txt-p">数码爱好者</span>
+                        <span class="text-xs text-gray-400">2026-07-04 19:15</span>
+                      </div>
+                      <p class="text-txt-light dark:text-darkmode-txt-light text-sm">期待看到更多数码和AI相关的分享！</p>
+                      <div class="flex items-center gap-4 mt-3">
+                        <button class="text-xs text-gray-400 hover:text-orange-500 transition-colors">👍 8</button>
+                        <button class="text-xs text-gray-400 hover:text-orange-500 transition-colors">💬 回复</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- 评论3 -->
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pink-400 to-red-500 flex items-center justify-center text-white font-bold">C</div>
+                  </div>
+                  <div class="flex-1">
+                    <div class="bg-white/40 dark:bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/20 dark:border-white/10">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="font-bold text-sm text-txt-p dark:text-darkmode-txt-p">路过的网友</span>
+                        <span class="text-xs text-gray-400">2026-07-04 18:00</span>
+                      </div>
+                      <p class="text-txt-light dark:text-darkmode-txt-light text-sm">流体渐变背景太好看了，是怎么实现的？</p>
+                      <div class="flex items-center gap-4 mt-3">
+                        <button class="text-xs text-gray-400 hover:text-orange-500 transition-colors">👍 15</button>
+                        <button class="text-xs text-gray-400 hover:text-orange-500 transition-colors">💬 回复</button>
+                      </div>
+                    </div>
+                    
+                    <!-- 回复 -->
+                    <div class="ml-8 mt-3">
+                      <div class="flex gap-3">
+                        <div class="flex-shrink-0">
+                          <div class="w-8 h-8 rounded-full bg-gradient-to-r from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold text-xs">主</div>
+                        </div>
+                        <div class="flex-1">
+                          <div class="bg-white/30 dark:bg-white/5 rounded-xl p-3 backdrop-blur-sm border border-white/15 dark:border-white/5">
+                            <div class="flex items-center gap-2 mb-1">
+                              <span class="font-bold text-xs text-txt-p dark:text-darkmode-txt-p">十九</span>
+                              <span class="text-xs text-gray-400">2026-07-04 18:30</span>
+                            </div>
+                            <p class="text-txt-light dark:text-darkmode-txt-light text-xs">用CSS的filter: blur()和渐变实现的，后面可以写篇教程分享一下！</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 加载更多 -->
+              <div class="text-center mt-8">
+                <button class="px-6 py-2 bg-white/40 dark:bg-white/10 text-txt-p dark:text-darkmode-txt-p rounded-full text-sm font-medium backdrop-blur-sm border border-white/20 dark:border-white/10 transition-all duration-300 hover:bg-white/60 dark:hover:bg-white/20 hover:shadow-md active:scale-[0.98]">加载更多评论</button>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </section>
+      
+      
+    </div>
+  </main>
+  <footer class="container mx-auto px-4 lg:px-8 fixed bottom-0 left-0 right-0 z-40 pointer-events-none">
+    <div class="mx-auto py-2 md:py-4">
+      <div class="rounded-full pointer-events-auto">
+        <nav class="liquid-glass-container">
+          <div class="liquidGlass-wrapper px-6 py-2 rounded-full">
+            <div class="liquidGlass-text drop-shadow-md-white rounded-full">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-txt-light dark:text-darkmode-txt-light">© 2026 十九的个人世界</span>
+                <div class="flex items-center gap-3">
+                  <a href="https://qm.qq.com/q/rn8I26bl8O" target="_blank" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon1-transparent.png" alt="QQ" class="w-4 h-4 object-contain"></a>
+                  <a href="mailto:3518988571@qq.com" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon2-transparent.png" alt="邮箱" class="w-4 h-4 object-contain"></a>
+                  <a href="https://space.bilibili.com/646698087" target="_blank" class="glass-button glass-button--icon p-1.5 rounded-full"><img src="icon3-transparent.png" alt="B站" class="w-4 h-4 object-contain"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
