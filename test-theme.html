@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主题切换测试</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen p-8">
+  <div class="max-w-md mx-auto">
+    <h1 class="text-2xl font-bold mb-4">主题切换测试</h1>
+    <p class="mb-4">当前主题：<span id="current-theme" class="font-bold text-orange-500">检测中...</span></p>
+    
+    <button id="theme-toggle" class="px-6 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors">
+      切换主题
+    </button>
+    
+    <div class="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+      <p class="text-gray-600 dark:text-gray-300">这是一个测试区域，用于验证主题切换是否正常工作。</p>
+    </div>
+    
+    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+      <p>提示：打开浏览器控制台（F12）查看日志</p>
+    </div>
+  </div>
+  
+  <script>
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      
+      updateThemeDisplay();
+      
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          
+          updateThemeDisplay();
+          console.log('主题已切换为:', isDark ? '暗色模式' : '亮色模式');
+        });
+      }
+    }
+    
+    function updateThemeDisplay() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const themeSpan = document.getElementById('current-theme');
+      if (themeSpan) {
+        themeSpan.textContent = isDark ? '暗色模式' : '亮色模式';
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', initTheme);
+  </script>
+</body>
+</html>
